@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://dsarycuhjhx1c"]
+
+[ext_resource type="Texture2D" uid="uid://daos1jxbpkfkc" path="res://icon.svg" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://ctmj31jc6kedm" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://dvvjmrv40bq0j" path="res://inomeado.svg" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=1598867088]
+script = ExtResource("1_epypp")
+
+[node name="Bancada" type="Sprite2D" parent="." unique_id=1080810917]
+modulate = Color(0.5411765, 0.26666668, 0.18039216, 1)
+self_modulate = Color(0.5411765, 0.26666668, 0.18039216, 1)
+position = Vector2(575.5, 539)
+scale = Vector2(8.9921875, 1.8281251)
+texture = ExtResource("1_0e48y")
+
+[node name="Pessoa" type="Sprite2D" parent="." unique_id=1034668919]
+z_index = -1
+position = Vector2(626, 291)
+texture = ExtResource("2_epypp")
+
+[node name="Panelas" type="Sprite2D" parent="." unique_id=1692536681]
+modulate = Color(0.25882354, 0.25882354, 0.25882354, 1)
+position = Vector2(300, 466.625)
+scale = Vector2(0.8222655, 0.74414086)
+texture = ExtResource("1_0e48y")
+
+[node name="colocar_prato" type="Button" parent="Panelas" unique_id=1927729334]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.02374
+offset_top = -127.99994
+offset_right = -4.408539
+offset_bottom = -4.3674316
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Carnes" type="Sprite2D" parent="." unique_id=504885146]
+modulate = Color(16.00457, 0, 0, 1)
+position = Vector2(388.99997, 600.125)
+scale = Vector2(2.4062498, 0.648438)
+texture = ExtResource("1_0e48y")
+
+[node name="pega_carne" type="Button" parent="Carnes" unique_id=1463956407]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.99999
+offset_top = -125.879456
+offset_right = 0.415596
+offset_bottom = 3.6625977
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Arroz" type="Sprite2D" parent="." unique_id=1234813704]
+modulate = Color(18.892157, 14.102987, 18.892157, 1)
+position = Vector2(897, 468)
+scale = Vector2(0.4531252, 0.3671876)
+texture = ExtResource("1_0e48y")
+
+[node name="pega_arroz" type="Button" parent="Arroz" unique_id=1035412564]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.20691
+offset_top = -126.638306
+offset_right = -2.2069092
+offset_bottom = -1.3618164
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Feijao" type="Sprite2D" parent="." unique_id=622373035]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(831, 467)
+scale = Vector2(0.44921917, 0.42968762)
+texture = ExtResource("1_0e48y")
+
+[node name="pega_feijao" type="Button" parent="Feijao" unique_id=82280518]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.33032
+offset_top = -124.50903
+offset_right = -1.6695557
+offset_bottom = 1.1636963
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Prato" type="Sprite2D" parent="." unique_id=1224236345]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(672, 458)
+scale = Vector2(1.0859376, 0.4609375)
+texture = ExtResource("1_0e48y")
+
+[node name="entregar_prato" type="Button" parent="Prato" unique_id=289725162]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.697815
+offset_top = -122.576294
+offset_right = -0.46044922
+offset_bottom = -1.0847778
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Maquina_bebidas" type="Sprite2D" parent="." unique_id=2003091161]
+modulate = Color(0.26657522, 0.2665752, 0.2665752, 1)
+position = Vector2(1054, 352)
+scale = Vector2(1, 1.9648436)
+texture = ExtResource("1_0e48y")
+
+[connection signal="pressed" from="Panelas/colocar_prato" to="." method="_on_colocar_prato_pressed"]
+[connection signal="pressed" from="Carnes/pega_carne" to="." method="_on_pega_carne_pressed"]
+[connection signal="pressed" from="Arroz/pega_arroz" to="." method="_on_pega_arroz_pressed"]
+[connection signal="pressed" from="Feijao/pega_feijao" to="." method="_on_pega_feijao_pressed"]
+[connection signal="pressed" from="Prato/entregar_prato" to="." method="_on_entregar_prato_pressed"]
