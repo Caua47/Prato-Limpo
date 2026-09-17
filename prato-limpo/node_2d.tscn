@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://daos1jxbpkfkc" path="res://icon.svg" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://ctmj31jc6kedm" path="res://node_2d.gd" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dvvjmrv40bq0j" path="res://inomeado.svg" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://higad7yxtbna" path="res://hub.tscn" id="4_0hol4"]
 
-[node name="Node2D" type="Node2D" unique_id=1598867088]
+[node name="Inicio" type="Node2D" unique_id=1598867088]
 script = ExtResource("1_epypp")
 
 [node name="Bancada" type="Sprite2D" parent="." unique_id=1080810917]
@@ -119,6 +120,8 @@ modulate = Color(0.26657522, 0.2665752, 0.2665752, 1)
 position = Vector2(1054, 352)
 scale = Vector2(1, 1.9648436)
 texture = ExtResource("1_0e48y")
+
+[node name="CanvasLayer" parent="." unique_id=2113323269 instance=ExtResource("4_0hol4")]
 
 [connection signal="pressed" from="Panelas/colocar_prato" to="." method="_on_colocar_prato_pressed"]
 [connection signal="pressed" from="Carnes/pega_carne" to="." method="_on_pega_carne_pressed"]
