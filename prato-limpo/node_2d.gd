@@ -1,4 +1,6 @@
 extends Node2D
+@onready var menu = $CanvasLayer
+
 var carne = Sprite2D.new()
 var arroz = Sprite2D.new()
 var feijao = Sprite2D.new()
@@ -14,6 +16,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
 
 
 func _on_pega_carne_pressed() -> void:
