@@ -39,6 +39,7 @@ icon = ExtResource("3_6eldl")
 flat = true
 
 [node name="Menu_de_pause" type="Control" parent="." unique_id=252559481]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 8

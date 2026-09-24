@@ -39,7 +39,7 @@ func _on_pega_feijao_pressed() -> void:
 	feijao.scale = Vector2(0.40, 0.20)
 	feijao.modulate = Color(0, 0, 0, 1)
 	add_child(feijao)
-	tem_feijao = false
+	tem_feijao = true
 
 func _on_pega_arroz_pressed() -> void:
 	arroz.texture = load("res://icon.svg")
@@ -47,7 +47,7 @@ func _on_pega_arroz_pressed() -> void:
 	arroz.scale = Vector2(0.30, 0.25)
 	arroz.modulate = Color(1, 1, 1, 1)
 	add_child(arroz)
-	tem_arroz = false
+	tem_arroz = true
 
 
 func _on_colocar_prato_pressed() -> void:
@@ -55,5 +55,9 @@ func _on_colocar_prato_pressed() -> void:
 
 
 func _on_entregar_prato_pressed() -> void:
-	if tem_arroz and tem_carne and tem_feijao:
+	if tem_arroz == true:
+		queue_free()
+	if tem_carne == true:
+		queue_free()
+	if tem_feijao == true:
 		queue_free()
