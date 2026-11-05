@@ -1,7 +1,7 @@
 extends Node2D
 @onready var menu = $CanvasLayer
 
-var carne = Sprite2D.new()
+
 var arroz = Sprite2D.new()
 var feijao = Sprite2D.new()
 
@@ -19,20 +19,11 @@ func _process(delta: float) -> void:
 	
 
 
-func _on_pega_carne_pressed() -> void:
-	carne.texture = load("res://icon.svg")
-	carne.position = $Panelas.global_position
-	carne.scale = Vector2(0.3, 0.3)
-	carne.modulate = Color(1, 0, 0, 1)
-	add_child(carne)
-	var tween = create_tween()
-	tween.tween_property(
-		carne, 
-		"modulate", 
-		Color(0.6, 0.3, 0.1, 1),
-		3.0                       
-	)
-	tem_carne = true
+func _on_pega_carne_pressed() -> void:                  
+	if $AnimatedSprite2D.visible == false:
+		$AnimatedSprite2D.visible = true
+		$AnimatedSprite2D.play("default")
+
 func _on_pega_feijao_pressed() -> void:
 	feijao.texture = load("res://icon.svg")
 	feijao.position = ($Prato.position - Vector2(30, - 9))
@@ -51,7 +42,7 @@ func _on_pega_arroz_pressed() -> void:
 
 
 func _on_colocar_prato_pressed() -> void:
-	carne.position = ($Prato.position - Vector2(-30, 0))
+	$AnimatedSprite2D.position = ($Prato.position - Vector2(-30, 0))
 
 
 func _on_entregar_prato_pressed() -> void:

@@ -4,6 +4,26 @@
 [ext_resource type="Script" uid="uid://ctmj31jc6kedm" path="res://node_2d.gd" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dvvjmrv40bq0j" path="res://inomeado.svg" id="2_epypp"]
 [ext_resource type="PackedScene" uid="uid://higad7yxtbna" path="res://hub.tscn" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://03imrmjvdpxb" path="res://bife.png" id="4_d21ai"]
+[ext_resource type="Texture2D" uid="uid://b37kj7x5useqq" path="res://Página 3.png" id="5_rj586"]
+[ext_resource type="Texture2D" uid="uid://ylvcgc7ik2i4" path="res://Página 4.png" id="6_4d7sh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3dwog"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d21ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rj586")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4d7sh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="Inicio" type="Node2D" unique_id=1598867088]
 script = ExtResource("1_epypp")
@@ -39,11 +59,42 @@ offset_bottom = -4.3674316
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1129974103]
+visible = false
+position = Vector2(308.00003, 446.00003)
+scale = Vector2(0.44921917, 0.42968762)
+sprite_frames = SubResource("SpriteFrames_3dwog")
+frame_progress = 0.48450497
+
 [node name="Carnes" type="Sprite2D" parent="." unique_id=504885146]
-modulate = Color(16.00457, 0, 0, 1)
-position = Vector2(388.99997, 600.125)
-scale = Vector2(2.4062498, 0.648438)
-texture = ExtResource("1_0e48y")
+position = Vector2(267, 581)
+scale = Vector2(0.446, 0.401)
+texture = ExtResource("4_d21ai")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Carnes" unique_id=83325607]
+position = Vector2(42.60089, 37.406494)
+scale = Vector2(0.9999999, 1)
+texture = ExtResource("4_d21ai")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Carnes" unique_id=871894311]
+position = Vector2(156.95056, 19.950073)
+texture = ExtResource("4_d21ai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Carnes" unique_id=446315939]
+position = Vector2(172.64569, -14.9626465)
+rotation = -0.12391838
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_d21ai")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Carnes" unique_id=1845430826]
+position = Vector2(87.44391, -39.90027)
+texture = ExtResource("4_d21ai")
+
+[node name="Sprite2D" type="Sprite2D" parent="Carnes" unique_id=596213393]
+position = Vector2(98.65466, -7.4813232)
+rotation = 0.24783675
+scale = Vector2(0.99999994, 0.9999999)
+texture = ExtResource("4_d21ai")
 
 [node name="pega_carne" type="Button" parent="Carnes" unique_id=1463956407]
 anchors_preset = 8
@@ -51,10 +102,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -127.99999
-offset_top = -125.879456
-offset_right = 0.415596
-offset_bottom = 3.6625977
+offset_left = -382.80267
+offset_top = -342.28186
+offset_right = 11.816132
+offset_bottom = -162.7308
 grow_horizontal = 2
 grow_vertical = 2
 
